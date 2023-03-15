@@ -19,9 +19,6 @@ function sendRequestXHR(method, url, data) {
     xhr.open(method, url);
     xhr.responseType = 'json';
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE, PUT');
-    xhr.setRequestHeader('Access-Control-Allow-Credentials', 'true');
     xhr.onload = function() {
         if (xhr.status >= 400) {
             response.textContent = 'Error: ' + xhr.response.message;
@@ -39,10 +36,7 @@ function sendRequestXHR(method, url, data) {
 function sendRequestFetch(method, url, data) {
     fetch(url, {
         method: method,
-        headers: {'Content-Type': 'application/json',
-                  'Access-Control-Allow-Origin': '*',
-                  'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
-                  'Access-Control-Allow-Credentials': 'true'},
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     })
     .then(response => {
@@ -73,7 +67,7 @@ function onPostClicked() {
 function onGetClicked() {
     const id = form.elements['id'].value;
     const typeIsXHR = document.querySelector('input[name="requestType"]:checked').value === 'xhr';
-    const url = 'https://httpbin.org/get/' + id;
+    const url = 'https://httpbin.org/get?id=' + id;
     console.log(url);
 
     if (typeIsXHR) sendRequestXHR('GET', url);
@@ -96,7 +90,7 @@ function onPutClicked() {
 function onDeleteClicked() {
     const id = form.elements['id'].value;
     const typeIsXHR = document.querySelector('input[name="requestType"]:checked').value === 'xhr';
-    const url = 'https://httpbin.org/delete/' + id;
+    const url = 'https://httpbin.org/delete?id=' + id;
 
     console.log(url);
 
