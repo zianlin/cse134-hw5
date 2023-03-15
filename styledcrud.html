@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Zian Lin</title>
+        <link rel="stylesheet" href="./styledcrud.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" async></script>
+    </head>
+    <body>
+        <h1>Zian's Blog</h1>
+    </body>
+
+    <ul id="blog_post_list">
+    </ul>
+
+    <input id="btn_create" class="create-button" type="button" value="New Post"/>
+
+    <dialog id="post_dialog">
+        <p>Add a blog post!</p>
+        <form id="post_dialog_form" method="dialog">
+            <label for="title_input">Post Title</label><br/>
+            <input type="text" id="title_input" name="title_input"/><br/>
+            <br/>
+            <label for="date_input">Post Date</label><br/>
+            <input type="date" id="date_input" name="date_input"/><br/>
+            <br/>
+            <label for="summary_input">Post Summary</label><br/>
+            <textarea id="summary_input" name="summary_input"></textarea><br/>
+            <br/>
+
+            <span display="inline">
+                <button id="btn_cancel" value="cancel">Cancel</button>
+                <input id="btn_save" type="submit" value="Save"></button>
+            </span>
+        </form>
+    </dialog>
+
+    <dialog id="delete_dialog">
+        <p>Delete post?</p>
+        <form id="delete_dialog_form" method="dialog">
+            <span display="inline">
+                <button id="btn_cancel_delete" value="cancel">Cancel</button>
+                <input id="btn_ok_delete" type="submit" value="OK"></button>
+            </span>
+        </form>
+    </dialog>
+    <script type="module" src="styledblog.js" ></script>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zian Lin</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZD9E0NMKV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WZD9E0NMKV');
+    </script>
+  </head>
+  <body>
+    <header class="header">
+        <h1>Zian Lin</h1>
+
+        <nav class="nav-bar">
+            <a href="index.html#selected_projects">Selected Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#awards">Awards</a>
+            <a href="index.html#resume">Resume</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="methodtest.html">Method Test</a>
+        </nav>
+
+        <div class="hamburger-menu">
+            <a href="" class="active"> </a>
+            <div id="links">
+                <a href=""></a>
+                <a href="index.html#selected_projects" class="redirect" onclick="toggleMenu()">Selected Projects</a>
+                <a href="index.html#experience" class="redirect" onclick="toggleMenu()">Experience</a>
+                <a href="index.html#awards" class="redirect" onclick="toggleMenu()">Awards</a>
+                <a href="index.html#resume" class="redirect" onclick="toggleMenu()">Resume</a>
+                <a href="index.html#contact" class="redirect" onclick="toggleMenu()">Contact</a>
+                <a href="methodtest.html" class="redirect" onclick="toggleMenu()">Method Test</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">≡</a>
+        </div>
+
+        <script>
+            function toggleMenu() {
+            var x = document.getElementById("links");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+    </header>
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <picture>
+                            <source srcset="portrait_imgs/portrait-200w.jpg" media="(min-width: 992px)" />
+                            <source srcset="portrait_imgs/portrait-150w.jpg" media="(min-width: 600px)" />
+                            <img src="portrait_imgs/portrait-100w.jpg" class="profile" alt="Portrait of Zian Lin." />
+                        </picture>
+                    </td>
+                    <td>
+                        <p>
+						Hi, I'm Zian! I'm a self-driven, perpetually curious programmer with extensive experience in software development, especially with mobile applications. Here you can find information on some projects I've worked on, my previous experience, and my awards & distinctions.  After graduation, I'm looking to continue my path with an internship or a new grad job in software development.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                Currently I'm an undergraduate tutor at UCSD for CSE 110, the software development class, where I tutor over <em>200</em> students on Java programming, object-oriented design patterns, and software development principles. In my free time I work on Bandmates, my music networking app, play the drums and guitar, swim, and read a lot of literary fiction. Feel free to ask me about any of my projects, experience, or interests!
+            </p>
+        </div>
+        <hr>
+        <section>
+            <a id="selected_projects"></a>
+            <h2>
+                Selected Projects
+            </h2>
+
+            <h3>Bandmates</h3>
+            <aside><p><i>Bringing together musicians, bands, and artists.</i></p></aside>
+            <div class="flex-parent-promos">
+                <picture>
+                    <source srcset="promo_imgs/bandmates_promo-650w.jpg" media="(min-width: 992px)" />
+                    <img src="promo_imgs/bandmates_promo-500w.jpg" class="flex-child-promos" alt="A picture of 'Bandmates' on a mobile phone.">
+                </picture>
+                <p class="flex-child-promos">Bandmates is an app that brings together musicians with similar taste in music and allows them to connect and chat with each other. I decided to create Bandmates after seeing flyers around campus with students advertising their favorite artists, what instruments they could play, and who they needed in their band. I thought students using paper flyers seemed awfully outdated for 2022, and I decided to get to work on a better way to connect musicians. Everything you see in the app was created by me: the frontend, the backend, the UI, even the logo. Bandmates is slated to launch at five college campuses in early 2023.</p>
+            </div>
+
+            <h3>Labyrinth</h3>
+            <aside><p><i>Navigate the world with your phone in your pocket.</i></p></aside>
+            <div class="flex-parent-promos">
+                <picture>
+                    <source srcset="promo_imgs/labyrinth_promo-650w.jpg" media="(min-width: 992px)" />
+                    <img src="promo_imgs/labyrinth_promo-500w.jpg" class="flex-child-promos" alt="A picture of 'Labyrinth' on a mobile phone.">
+                </picture>
+                <p class="flex-child-promos">Labyrinth allows you to navigate to a location through haptic feedback alone. The app calls the Google Maps API with the user's desired destination and method of transport, and it translates it into a series of coded vibrations that buzz whenever the user needs to make a turn. It makes navigation far more accessible to those who are hard of hearing and cannot afford to constantly check their phone while moving. Labyrinth ended up winning the <strong>'Most Technical'</strong> award at IEEE's winter 2022 showcase for it's complexity.</p>
+            </div>
+
+            <h3>Birds of a Feather</h3>
+            <aside><p><i>A social network for the classroom.</i></p></aside>
+            <div class="flex-parent-promos">
+                <picture>
+                    <source srcset="promo_imgs/bof_promo-650w.jpg" media="(min-width: 992px)" />
+                    <img src="promo_imgs/bof_promo-500w.jpg" class="flex-child-promos"  alt="A picture of 'Birds of a Feather' on a mobile phone.">
+                </picture>
+                <p class="flex-child-promos" >Birds of a Feather is a social networking app that connects students with other nearby students who they've shared classes with in the past. Returning to on-campus life for the first time after quarantine, we felt the need to create something that connected people. This app was developed with extensive Agile processes in a real-world environment, with me managing the project and programming the database logic, login system, and user interface.</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <a id="experience"></a>
+            <h2>
+                Experience
+            </h2>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <picture>
+                                <source srcset="logo_imgs/ucsd_logo-100w.jpg" media="(min-width: 992px)" />
+                                <source srcset="logo_imgs/ucsd_logo-80w.jpg" media="(min-width: 600px)" />
+                                <img src="logo_imgs/ucsd_logo-60w.jpg" class="company-icon" alt="Logo for UC San Diego.">
+                            </picture>
+                        </td>
+                        <td>
+                            <b>Undergraduate Tutor, UC San Diego</b> <i>JAN. 2022 - PRESENT</i>
+                            <ul>
+                                <li>Tutoring over 200 students for CSE 110 Software Development on Java development, OOP patterns, and Agile methods.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <picture>
+                                <source srcset="logo_imgs/bandmates_logo-100w.jpg" media="(min-width: 992px)" />
+                                <source srcset="logo_imgs/bandmates_logo-80w.jpg" media="(min-width: 600px)" />
+                                <img src="logo_imgs/bandmates_logo-60w.jpg" class="company-icon" alt="Logo for Bandmates.">
+                            </picture>
+                        </td>
+                        <td>
+                            <b>Founder, Bandmates</b> <i>JUN. 2022 - PRESENT</i>
+                            <ul>
+                                <li>Founded and created music networking app that enables bands, musicians, & artists to connect with each other.</li>
+                                <li>Implemented all frontend, backend, UI/UX, API calls, database logic, multithreading, etc.</li>
+                                <li>Slated to launch at five college campuses early 2023.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <picture>
+                                <source srcset="logo_imgs/drahix_logo-100w.jpg" media="(min-width: 992px)" />
+                                <source srcset="logo_imgs/drahix_logo-80w.jpg" media="(min-width: 600px)" />
+                                <img src="logo_imgs/drahix_logo-60w.jpg" class="company-icon" alt="Logo for Drahi X-Novation Center.">
+                            </picture>
+                        </td>
+                        <td>
+                            <b>Undergraduate Researcher, Drahi X-Novation Center.</b> <i>SEPT. 2022 - DEC. 2022</i>
+                            <ul>
+                                <li>Researched how to best optimize network selection algorithms for smartphones and other smart mobile devices while on exchange at Ecole Polytechnique. </li>
+								<li>Advised by Dr. Juan Antonio Cordero-Fuertes.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <picture>
+                                <source srcset="logo_imgs/zane_wearables_logo-100w.jpg" media="(min-width: 992px)" />
+                                <source srcset="logo_imgs/zane_wearables_logo-80w.jpg" media="(min-width: 600px)" />
+                                <img src="logo_imgs/zane_wearables_logo-60w.jpg" class="company-icon" alt="Logo for Zane Wearables.">
+                            </picture>
+                        </td>
+                        <td>
+                            <b>Mobile Developer, Zane Wearables</b> <i>JAN. 2021 - JUN. 2021</i>
+                            <ul>
+                                <li>Developed the frontend and backend for an application that translates Google Maps directions into haptic feedback for IEEE’s QP program.</li>
+                                <li>Won IEEE’s ‘Most Technical’ award for the app at the WI22 QP and QP++ showcase.</li>
+                                <li>Led and coordinated all team efforts, ensuring work completion through both remote and in-person models.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <picture>
+                                <source srcset="logo_imgs/ksdt_logo-100w.jpg" media="(min-width: 992px)" />
+                                <source srcset="logo_imgs/ksdt_logo-80w.jpg" media="(min-width: 600px)" />
+                                <img src="logo_imgs/ksdt_logo-60w.jpg" class="company-icon" alt="Logo for KSDT Radio.">
+                            </picture>
+                        </td>
+                        <td>
+                            <b>Software Engineer Intern, KSDT Radio</b> <i>OCT. 2021 - SEPT. 2022</i>
+                            <ul>
+                                <li>Conceived web app with MongoDB, Express, React, NodeJS stack that enables students to book practice rooms, workshops, and recording sessions. Created following user complaints with outdated and insecure Google Calendar system.</li>
+                                <li>Utilized Agile + CI/CD  practices and project mgmt. tools like Zenhub & Notion to foster an efficient work environment.</li>
+                                <li>Helped migrate physical station servers to AWS cloud system.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <a id="awards"></a>
+            <h2>
+                Awards
+            </h2>
+            <div class="flex-parent-awards">
+                <div class="flex-child-awards">
+                    <p>
+                        <b>IEEE Most Technical Award</b>
+                        <br>
+                        Awarded to the most technically impressive project submitted to IEEE's QP program. Won by 'Labyrinth' for IEEE's WI22 QP program.
+                    </p>
+                </div>
+                <div class="flex-child-awards">
+                    <p>
+                        <b>Caledonian Society</b>
+                        <br>
+                        Distinction awarded to Muir students who've reached 44 units while maintaining a GPA over 3.8.
+                    </p>
+                </div>
+                <div class="flex-child-awards">
+                    <p>
+                        <b>Provost Honors</b>
+                        <br>
+                        Distinction awarded to UCSD students who've maintained a quarterly GPA above 3.5. Achieved every quarter since coming in as a freshman.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <a id="resume"></a>
+            <h2>
+                Resume
+            </h2>
+            <div class="border">
+                <iframe width="900" height="900" src="https://docs.google.com/document/d/1TZ9MS4ijgH8mKzBvxkSwlvbbusOXA6ZcYgM5ppdxzmM/edit?usp=sharing">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <a id="contact"></a>
+        <p style="text-align: center"><b>Get in touch!</b></p>
+        <div class="flex-parent-socials">
+            <a class="flex-child-socials" href="https://www.linkedin.com/in/zianlin/">LinkedIn</a>
+            <a class="flex-child-socials" href="https://github.com/zianlin">GitHub</a>
+            <a class="flex-child-socials" href="mailto:zian67@gmail.com">Email (Professional)</a>
+            <a class="flex-child-socials" href="mailto:z9lin@ucsd.edu">Email (School)</a>
+        </div>
+        <br>
+        <form action="mailto:zian67@gmail.com">
+            <fieldset>
+                <legend>
+                    Contact Form
+                </legend>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+				
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				
+                <label for="purposes">Purpose?</label>
+                <select id="purposes">
+					<optgroup label = "Work">
+						<option value="work">Job opportunity</option>
+						<option value="work">Internship opportunity</option>
+						<option value="work">Other work-related topic</option>
+					</optgroup>
+					<optgroup label = "Personal">
+						<option value="personal">General inquiry</option>
+					</optgroup>
+					<option value="other">Other</option>
+                </select>
+				
+				<label for="company_dropdown">If job opportunity, what kind of position? (optional)</label>
+				<input list="company_positions" id="company_dropdown">
+				<datalist id="company_positions">
+					<option value="Front-end software engineer">SWE</option>
+					<option value="Back-end software engineer">SWE</option>
+					<option value="Full-stack software engineer">SWE</option>
+					<option value="Front-end mobile engineer">Mobile</option>
+					<option value="Back-end mobile engineer">Mobile</option>
+					<option value="Full-stack mobile engineer">Mobile</option>
+				</datalist>
+				
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Email Contents
+                </legend>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <br>
+                <button type="button">Submit</button>
+            </fieldset>
+         </form>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zian Lin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" async></script>
+  </head>
+  <body>
+    <h1>Custom Dialogs?</h1>
+    <span id="customdialogs" display="inline">
+        <input id="btn_alert" type="button" value="Alert"/>
+        <input id="btn_confirm" type="button" value="Confirm"/>
+        <input id="btn_prompt" type="button" value="Prompt"/>
+        <input id="btn_safer_prompt" type="button" value="Safer Prompt"/>
+    </span>
+    <hr/>
+    <output id="output" style="border-style: double; visibility: hidden;">
+    </output>
+
+    <dialog id="dialog_alert">
+        <p>Alert pressed!</p>
+        <form method="dialog">
+          <button>OK</button>
+        </form>
+    </dialog>
+    <dialog id="dialog_confirm">
+        <p>Do you confirm this?</p>
+        <form method="dialog">
+            <span display="inline">
+                <button id="btn_cancel" value="cancel">Cancel</button>
+                <button id="btn_ok" value="default">OK</button>
+            </span>
+        </form>
+    </dialog>
+    <dialog id="dialog_prompt">
+        <p>What is your name?</p>
+        <form method="dialog">
+            <input type="text" id="name_input" name="name_input">
+            <span display="inline">
+                <button id="btn_cancel" value="cancel">Cancel</button>
+                <button id="btn_ok" value="default">OK</button>
+            </span>
+        </form>
+    </dialog>
+
+    <script type="module" src="customdialog.js"></script>
+  </body>
+</html>

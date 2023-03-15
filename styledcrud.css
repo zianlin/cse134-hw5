@@ -1,0 +1,51 @@
+* {
+    font-family: Helvetica;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 20px;
+}
+
+#blog_post_list {
+    min-width: 50%;
+    list-style-type: none;
+}
+
+#blog_post_list .blog-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+input.create-button {
+    padding: 10px;
+    margin: 20px auto;
+}
+
+/*Icons by Kiranshastry on Flaticon*/
+/*https://www.flaticon.com/free-icon/edit_1159633?term=edit&page=1&position=1&origin=style&related_id=1159633*/
+img.edit-button {
+    content: url(button_imgs/edit-64w.png);
+    background-repeat: no-repeat;
+    /* put the height and width of your image here */
+    height: auto;
+    width: 20px;
+    margin: 0px 3px;
+}
+
+/*https://www.flaticon.com/free-icon/delete_1214428?term=delete&page=1&position=1&origin=style&related_id=1214428*/
+img.delete-button {
+    content: url(button_imgs/delete-64w.png);
+    background-repeat: no-repeat;
+    /* put the height and width of your image here */
+    height: auto;
+    width: 20px;
+    margin: 0px 3px;
+}
