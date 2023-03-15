@@ -68,7 +68,6 @@ function onGetClicked() {
     const id = form.elements['id'].value;
     const typeIsXHR = document.querySelector('input[name="requestType"]:checked').value === 'xhr';
     const url = 'https://httpbin.org/get?id=' + id;
-    console.log(url);
 
     if (typeIsXHR) sendRequestXHR('GET', url);
     else sendRequestFetch('GET', url);
@@ -91,8 +90,6 @@ function onDeleteClicked() {
     const id = form.elements['id'].value;
     const typeIsXHR = document.querySelector('input[name="requestType"]:checked').value === 'xhr';
     const url = 'https://httpbin.org/delete?id=' + id;
-
-    console.log(url);
 
     if (typeIsXHR) sendRequestXHR('DELETE', url);
     else sendRequestFetch('DELETE', url);
